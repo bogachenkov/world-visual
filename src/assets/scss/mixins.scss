@@ -1,0 +1,57 @@
+@import './variables.scss';
+
+/// @param {string} $position: `static` | `relative` | `absolute` | `fixed`
+/// @param {string} $args: `top` | `right` | `bottom` | `left`
+@mixin position($position,$args){
+	@each $o in top right bottom left {
+		$i: index($args, $o);
+		@if $i and $i + 1 <= length($args) and type-of(nth($args, $i + 1)) == number {
+			#{$o}: nth($args, $i + 1);
+		}
+	}
+	position: $position;
+}
+
+@mixin margin-auto {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+@mixin mq($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+@mixin appFont {
+  font-family: 'Open Sans', sans-serif;
+}
+@mixin titleFont {
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+}
+
+@mixin flex($align, $justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin size($width, $height:$width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity = $opacity-ie); //IE8
+}

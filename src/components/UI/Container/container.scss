@@ -1,0 +1,13 @@
+@import '@scss/mixins';
+
+.container {
+  width: 1160px;
+  max-width: 100%;
+  padding: 0 15px 15px;
+  margin: 0 auto;
+  height: 100vh;
+
+  @include mq('tablet') {
+    padding: 0 30px 15px;
+  }
+}

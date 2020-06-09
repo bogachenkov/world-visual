@@ -1,0 +1,18 @@
+@import '@scss/variables.scss';
+@import '@scss/mixins.scss';
+
+.title {
+  @include titleFont;
+  color: $main-color;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 1em 0;
+
+  @include mq('tablet') {
+    font-size: 20px;
+  }
+
+  @include mq('tablet-wide') {
+    font-size: 22px;
+  }
+}

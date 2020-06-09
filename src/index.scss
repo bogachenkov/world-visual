@@ -1,0 +1,22 @@
+@import '@scss/variables';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+@-moz-document url-prefix() {
+  body {
+      font-weight: lighter !important;
+  }
+}
+
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: $app-background;
+  font-family: 'Open Sans', sans-serif;
+}

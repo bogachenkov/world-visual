@@ -1,0 +1,30 @@
+@import '@scss/variables.scss';
+@import '@scss/mixins';
+
+.button {
+  width: 120px;
+  text-align: center;
+  border: none;
+  border-radius: 3px;
+  background-color: $main-color;
+  padding: 1em;
+  outline: none;
+  cursor: pointer;
+  color: #edf1f4;
+  text-transform: uppercase;
+  transition: .3s;
+  font-size: 10px;
+
+  @include mq('phone-wide') {
+    font-size: 11px;
+    width: 150px;
+  }
+
+  @include mq('tablet') {
+    font-size: 14px;
+  }
+
+  &:hover {
+    opacity: .9;
+  }
+}

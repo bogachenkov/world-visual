@@ -1,0 +1,49 @@
+@import '@scss/mixins';
+
+.population-chart {
+  .axis-group {
+    color: #a0a0a0;
+
+    .tick {
+      > line {
+        color: #dddcde;
+      }
+      > text {
+        color: #a1a2a1;
+        @include appFont;
+        font-weight: 700;
+        font-size: 13px;
+      }
+    }
+  }
+
+  .y-axis-group {
+    .domain {
+      display: none;
+    }
+    .tick:first-of-type > line {
+      display: none;
+    }
+  }
+
+  .x-axis-group {
+    color: #c3c4c3;
+
+    .tick {
+      > line {
+        stroke-width: 3px;
+        color: #c3c4c3;
+      }
+
+      > text {
+        color: #000000;
+        font-size: 12px;
+        font-weight: 600;
+      }
+    }
+
+    > path {
+      stroke-width: 3px;
+    }
+  }
+}

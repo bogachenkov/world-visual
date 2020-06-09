@@ -1,0 +1,19 @@
+@import '@scss/mixins';
+
+.app-grid {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  overflow-x: hidden;
+
+  @include mq('tablet') {
+    overflow: unset;
+  }
+
+  > section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+}

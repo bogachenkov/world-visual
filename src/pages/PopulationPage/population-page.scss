@@ -1,0 +1,14 @@
+@import '@scss/mixins';
+
+.population-page {
+  &--header {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 120px;
+    gap: 15px;
+
+    @include mq('phone-wide') {
+      grid-template-columns: 1fr 150px;
+    }
+  }
+}

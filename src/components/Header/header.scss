@@ -1,0 +1,38 @@
+@import '@scss/variables';
+@import '@scss/mixins';
+
+.header {
+  margin: 20px 0 0;
+  position: relative;
+  padding: 10px 0;
+
+  &--title {
+    @include titleFont;
+    font-size: 18px;
+    font-weight: 400;
+    color: $main-color;
+    border-bottom: 3px solid $main-color;
+    margin: .5em 0 0;
+    padding-bottom: 15px;
+
+    @include mq('tablet') {
+      font-size: 30px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 76px;
+    height: 4px;
+    background-color: $main-color;
+    opacity: .8;
+
+    @include mq('tablet') {
+      height: 6px;
+      width: 124px;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@import '@scss/variables';
+@import '@scss/mixins';
+
+.timezones-chart {
+  .axis-group {
+    .tick {
+      > line {
+        color: #dddcde;
+      }
+      > text {
+        color: $main-color;
+        @include appFont;
+        font-weight: 700;
+        font-size: 13px;
+      }
+    }
+  }
+
+  .x-axis-group {
+    .domain {
+      display: none;
+    }
+
+    .tick:first-of-type > line {
+      stroke-width: 3px;
+    }
+  }
+
+  .y-axis-group {
+    color: #c3c4c3;
+
+    .domain {
+      display: none;
+    }
+
+    .tick {
+      > line {
+        stroke-width: 5px;
+        color: #e8ebea;
+      }
+
+      > text {
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      &:first-of-type > line {
+        display: none;
+      }
+    }
+
+    > path {
+      stroke-width: 1px;
+    }
+  }
+}
